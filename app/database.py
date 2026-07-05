@@ -30,10 +30,10 @@ SessionDep = Annotated[Session, Depends(get_session)]
 # while True:
 #     try:
 #         conn = psycopg2.connect(
-#             host="localhost",
-#             database="fastapi",
-#             user="postgres",
-#             password="Aditya@postgres2026",
+#             host=settings.database_host,
+#             database=settings.database_name,
+#             user=settings.database_user,
+#             password=settings.database_password,
 #             cursor_factory=RealDictCursor
 #         )
 #         cursor = conn.cursor()
