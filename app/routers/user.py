@@ -16,7 +16,7 @@ async def create_user(reqBody: schemas.UserCreate, session: SessionDep):
     
     hashed_password = utils.password_hash.hash(reqBody.password)
     reqBody.password = hashed_password
-    new_user = models.User(email=reqBody.email, password=reqBody.password)
+    new_user = models.User(email=reqBody.email, password=reqBody.password, phone_number=reqBody.phone_number)
     session.add(new_user)
     session.commit()
     session.refresh(new_user)

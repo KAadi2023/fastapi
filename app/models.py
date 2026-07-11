@@ -13,7 +13,7 @@ class User(SQLModel, table=True):
         sa_type=TIMESTAMP(timezone=True),
         sa_column_kwargs={"server_default": text("now()"), "nullable": False}
     )
-    phone_number: str = Field(sa_type=String())
+    phone_number: str = Field(sa_type=String(), nullable=True, sa_column_kwargs={"unique": True, "index": True})
 
 
 class Post(SQLModel, table=True):
