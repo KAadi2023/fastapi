@@ -29,7 +29,7 @@ services:
       POSTGRES_PASSWORD: Aditya@postgres2026
       POSTGRES_DB: fastapi
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
