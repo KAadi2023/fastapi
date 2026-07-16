@@ -33,5 +33,5 @@ app.include_router(vote.router)
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to my FastAPI application!"}
+    return {"message": "Welcome to my FastAPI application! Successfully deployed with CI/CD."}
 
