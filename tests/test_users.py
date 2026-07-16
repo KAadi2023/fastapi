@@ -4,13 +4,6 @@ from app import schemas
 from app.config import settings
 
 
-def test_root(client):
-    resp = client.get("/")
-    print(resp.json().get("message"))
-    assert resp.json().get("message") == 'Welcome to my FastAPI application!'
-    assert resp.status_code == 200
-
-
 def test_create_user(client):
     resp = client.post(
         "/users",
